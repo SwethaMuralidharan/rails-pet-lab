@@ -2,7 +2,7 @@
 <hr>
 <% @owners.each do |owner| %>
   <p>
-    <strong><%= link_to "#{owner.first_name} #{owner.last_name}", owner_path(owner) %></strong>
+    <strong><%= link_to "#{owner.first_name} #{owner.last_name}", owner_path(owner.id) %></strong>
   </p>
 <% end %>
 <hr>

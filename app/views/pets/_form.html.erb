@@ -1,2 +1,17 @@
 <h2>pet _form partial</h2>
 <p>Find me in app/views/pets/_form.html.erb</p>
+<!-- <p id="notice"><%= notice %></p> If using notice instead of flash, make a placeholder like this.--> 
+<%= form_for [@owner, @pet]  do |f| %>
+<div class="form-group">
+  <strong>Name : </strong><%= f.text_field :name, class: "form-control" %><br>
+</div>
+<div class="form-group">
+  <strong>Breed : </strong><%= f.text_field :breed, class: "form-control"%><br>
+</div>
+<div class="form-group">
+  <strong>Date Of Birth : </strong><%= f.text_field :date_of_birth, class: "form-control"%><br>
+</div>
+<div class="form-group">
+  <%= f.submit "New pet", class: "btn btn-block btn-success"  %>
+</div>
+<% end %>
